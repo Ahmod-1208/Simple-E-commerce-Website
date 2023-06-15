@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method/Loop Assignment</title>
+</head>
+
+<style>
+    body{
+        /* background-color: rgb(0, 255, 157); */
+        background-color: blue;
+    }
+
+    nav{
+        
+        opacity: 0.8;
+        width: 40%;
+        text-align: center;
+    }
+    nav:hover{
+        background-color: purple;
+        color:aqua;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.h1{
+        color: white;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 10px;
+     
+    }
+    input{
+        background-color:rgba(255, 255, 255, 0.863);
+    }
+    #showBox{
+       width: 50%;
+       margin: 0 auto;
+       text-decoration: underline;
+    }
+  
+
+
+
+</style>
+
+
+<!-- <button  style="display: flex; justify-content:space-between ;align-items: center;text-decoration: underline;" ></button> -->
+
+
+
+<body>
+    <nav>
+        <h1 style="color: white;">STYLE IT TO YOUR TASTE !!!</h1>
+    </nav>
+
+    <div>
+        <input type="text" id="workingBox">
+        <button style="color: black;background-color: orange;" onclick="push()">ADD YOURS</button>
+        <div id="showBox"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        let perform = []
+
+        function push(){
+            perform.push(workingBox.value)
+            show()
+
+        }
+
+        function show(){
+            showBox.innerHTML =''
+            perform.forEach((elem, i) => {
+                showBox.innerHTML += `
+                <div>
+                    <div class="btnSpace" style="display: flex; justify-content:space-between;align-items: center;text-decoration: underline;">
+
+                        <span>${elem} ${i}</span>
+                        <button onclick="del(${i})" style="color: black;background-color: red;">Erase</button>
+                        <button onclick="edit(${i})" style="color: black;background-color: green;">Edit</button>
+
+                    </div>
+                </div>
+                `
+
+            })
+        }
+
+        function del(i){
+            perform.splice(i, 1)
+            show()
+        }
+
+
+
+
+        function edit(i){
+          let newStyle = prompt("Re-style");
+          if (newStyle !== "") {
+            perform[i] = newStyle;
+            show();
+          }
+        }
+
+       
+
+    
+    </script>
+</body>
+</html>

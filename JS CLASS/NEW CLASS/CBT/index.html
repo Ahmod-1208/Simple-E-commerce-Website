@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+
+
+    <script>
+
+        let Test = [
+            {
+                Question:"What is 2+3 ?",
+                Option:[2, 4, 5, 6],
+                Guess:"",
+                Answer:5,
+            },
+
+            {
+                Question:"What is 2x3 ?",
+                Option:[3, 10, 5, 6],
+                Answer:6,
+            },
+
+            {
+                Question:"What is 2-3 ?",
+                Option:[2, -1, 9, 6],
+                Answer:-1,
+            },
+
+            {
+                Question:"What is 3+3 ?",
+                Option:[2, 4, 5, 6],
+                Answer:6,
+            },
+
+            {
+                Question:"What is 2+3 ?",
+                Option:[2, 4, 5, 6],
+                Answer:5,
+            },
+
+            
+        ];
+        function display() {
+            Test.forEach((quest, i) => {
+                show.innerHTML += `<p>${quest.Question} </p>
+                ${quest.Option.map(
+                    (option, j) => 
+                        `
+                    <div>
+                        <input type="radio" name=${i} value=${option} id="inp" >
+                        <label>${option}</label>
+                    </div>
+                        `
+              )}`
+
+              let inp = document.querySelectorAll("#inp");
+            inp.forEach((elem) => {
+               elem.addEventListener("change", (e) =>{
+               let studentSelectedAnswer = e.target.value;
+              let studentSelectedName = e.target.name;
+              console.log(studentSelectedName);
+              if(studentSelectedAnswer === Test[studentSelectedName].Answer){
+                console.log(
+                    `Test number ${
+                        Number(studentSelectedName) +1
+                    } is the answer`
+                );
+              } else{
+                console.log(
+                    `Test number ${
+                        Number(studentSelectedName) +1
+                    } is not correct`
+                );
+              }
+               });
+            });
+            });
+
+          
+        }
+
+        display();
+    </script>
+</body>
+</html>

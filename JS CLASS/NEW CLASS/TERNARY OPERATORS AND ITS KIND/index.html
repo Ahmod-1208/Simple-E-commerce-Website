@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+    <script>
+        // let car = true;
+        // console.log(car ? "is true" : "is false")
+
+
+        // const brad ={
+        //     name:'Brad',
+        //     age:10
+        // }
+        // console.log(brad)
+
+
+        function Person(name, dob){
+            this.name =name
+            // this.age = age
+            // this.location = location
+            this.birthday = new Date(dob)
+            this.calculateAge = function(){
+                const diff = Date.now() - this.birthday.getTime();
+                const ageDate = new Date(diff);
+                return  Math.abs(ageDate.getUTCFullYear()- 2023);
+
+            }
+            
+          
+        }
+        
+     
+      
+
+        // const ahmod =new Person('Ahmod', 10, 'Nigeria');
+        // const salaudeen = new Person('Salaudeen',14, "USA");
+        const ahmad = new Person('Ahmad',  '08-12-2005');
+
+        console.log(ahmad.calculateAge());
+
+
+        /*ARROW FUNCTION*/
+        // const  sayHello = function(){
+        //     console.log('Hello');
+        // } ---this is normal function
+
+        // const  sayHello = () => {
+        //     console.log('Hello');
+        // }---this  is an arrow function
+
+
+            // One line function that doesn't need braces
+    //    const  sayHello = () => console.log('Hello')
+
+    //to do that of return with one line
+    // const sayHello =  () => 'Hello bro,Haffa.'
+
+
+    //to return obj
+    // const sayHello = () => ({msg: 'Hello'})
+
+
+    //single param does not need parenthesis
+    // const sayHello = name => console.log(`Hello ${name}`);
+
+
+
+    //Multiple params need parenthesis
+//     const sayHello =( firstName, lastName )=> console.log(`Hello ${firstName} ${lastName}`);
+//  sayHello('Ahmad', 'Salaudeen') ; 
+
+
+
+
+
+
+    const users = ['Salaudeen', 'Ahmad', 'Ayomide'];
+
+    // const nameLengths  = users.map(function (name) {
+    //     return name.length;
+    // });
+
+    
+
+    // //using an arrow function
+    // const nameLengths  = users.map((name) =>{
+    //     return name.length;
+    // });
+
+
+    // inserting the return directly into it
+    const nameLengths  = users.map( name => name.length)
+
+    console.log(nameLengths);
+    </script>
+    
+</body>
+</html>

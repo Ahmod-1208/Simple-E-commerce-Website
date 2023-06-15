@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="userName">
+    <input type="text" name="" id="email">
+    <button onclick="pushUsers()">PUSH</button>
+
+    <div id="display"></div>
+
+
+
+
+
+    <script>
+        let usersArr = []  || JSON.parse(localStorage.getItem('List of users'))
+
+        function pushUsers(){
+            let obj ={
+                name:userName.value,
+                email:email.value,
+                city:""
+            }
+
+            usersArr.push(obj)
+        localStorage.setItem("user",JSON.stringify(usersArr))
+
+        displayUsers()
+
+        }
+
+        function displayUsers(){
+            const display = document.getElementById('display')
+
+            //display has to be cleared before showing
+            display.innerHTML = ''
+            usersArr.forEach((elem, index) => {
+                display.innerHTML += `
+                S/N :${index + 1}
+                person: ${elem.name}
+                mail:${elem.email}
+                city:${elem.city} 
+                
+                <button onclick="Del()">Delete</button>
+                `
+            })
+        }
+
+        function Del(index){
+            usersArr.splice(index, 1)
+            localStorage.setItem("user",JSON.stringify(usersArr))
+
+            displayUsers()
+        }
+        displayUsers()
+
+
+
+        
+        
+
+
+    </script>
+</body>
+</html>

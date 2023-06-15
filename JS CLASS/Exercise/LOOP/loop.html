@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #regenerate{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+       row-gap: 3px;
+        
+    }
+    #regenerate{
+        background-color:blue;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+</style>
+
+
+
+<body>
+    <input type="text"  id="firstBox" placeholder="Insert numeral number">
+    <input type="text"  id="secondBox" placeholder="Insert digit">
+    <button onclick="generate()" style="background-color: blue;color: aliceblue;">DUPLICATE</button>
+
+    <h2 id="regenerate"></h2>
+</body>
+</html>
+
+
+<script>
+let numbers = [0,1,2,3,4,5,6,7,8,9];
+
+
+function generate(){
+    if (document.getElementById('regenerate')) {
+        document.getElementById("regenerate").innerHTML = ''
+    }
+ 
+let firstInput =document.getElementById("firstBox").value;
+let secondInput = document.getElementById("secondBox").value;
+let duplicateResult = ""
+
+for (let i =Number(firstInput);  i <= Number(secondInput); i++){
+
+    for (let z = 1; z <= 12; z++){
+        document.getElementById('regenerate').innerHTML += i  + "x" + z + "=" + (i*z) + "<br>"
+    }
+    document.getElementById('regenerate').innerHTML += '<div>' + '</div>'
+    
+}
+
+
+
+
+}
+
+
+
+</script>

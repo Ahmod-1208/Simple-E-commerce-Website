@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #show{
+            width: 100px;
+            height: 100px;
+            background-color:white;
+        }
+    </style>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="width" placeholder="insert your required width">
+    <input type="number" name="" id="height" placeholder="insert your required height">
+    <input type="text" name="" id="BgColor" placeholder="Background color">
+
+    <button onclick="perform()">Done</button>
+    <div id="show"></div>
+</body>
+</html>
+
+
+<script>
+   let result = document.getElementById("show");
+
+   perform = () =>{
+    let inpWdth = document.getElementById("width").value;
+    let inphgth = document.getElementById("height").value;
+    let inpBgC = document.getElementById("BgColor").value;
+    
+    result.style.width = inpWdth + "px";
+    result.style.heigth = inphgth + "px";
+    result.style.backgroundColor = inpBgC;
+   }
+
+
+</script>

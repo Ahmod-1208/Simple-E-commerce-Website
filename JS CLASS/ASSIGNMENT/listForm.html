@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            background-color:blueviolet;
+            height: 60vh;
+           
+        }
+        #container,input,#submit{
+           display: block;
+           margin: 0 auto;
+        }
+        input{
+            background-color: rgba(147, 147, 168, 0.452);
+            padding: 10px;
+            width: 40%;
+            
+           
+        }
+        input::placeholder{
+            color: white;
+        }
+        #submit{
+            background-color:rgba(172, 199, 250, 0.795);
+        }
+        table{
+            margin: 0 auto;
+        }
+        tr,td{
+            padding: 45px;
+            margin:0 auto;
+        }
+    </style>
+
+<body>
+   <div id="container">
+    <input placeholder="Enter your name" type="text" name="" id="clientName">
+    <input placeholder="Enter your email" type="text" name="" id="email">
+    <input placeholder="Enter your level" type="text" name="" id="level">
+    <input placeholder="Enter your gender" type="text" name="" id="gender">
+    <button id="submit" onclick="submit()">SUBMIT</button>
+   </div>
+
+   <table>
+
+        <th>
+            <tr>
+                <th>NAME:</th>
+                <th>EMAIL:</th>
+                <th>LEVEL:</th>
+                <th>GENDER:</th>
+            </tr>
+        </th>
+        <tbody id="display"></tbody>
+
+   </table>
+
+
+   <script>
+
+
+
+    let clientList = [
+        {
+           clientName:"",
+            email:"",
+            level:"",
+            gender:"",
+        }
+    ]
+
+
+        function show(){
+            display.innerHTML =''
+            clientList.forEach((elem) =>{
+                console.log(elem)
+
+                display.innerHTML += `
+                <tr>
+                    <td>${elem.clientName}</td>
+                    <td>${elem.email}</td>
+                    <td>${elem.level}</td>
+                    <td>${elem.gender}</td>
+                    <td> <button onclick="edit()" style="color: black;background-color: green;">Edit</button></td>
+                    
+                </tr>
+               
+                
+                `
+            })
+            
+        }
+
+        show()
+
+
+
+        function submit(){
+            let data ={
+                name:clientName.value,
+                email:email.value,
+                level:level.value,
+                gender:gender.value,
+            }
+            console.log(data)
+            clientList.push(data)
+            show()
+        }
+
+        function edit(){
+            let newInp = prompt("MAKE A CORRECTION");
+            if (newInp !== ""){
+                clientList[i] = newInp;
+                show();
+
+            }
+        }
+
+        
+   </script>
+</body>
+</html>

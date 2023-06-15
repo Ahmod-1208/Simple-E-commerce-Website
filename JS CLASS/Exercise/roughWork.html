@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="numberShow">
+        <input type="text" name=""  value="" id="signShow">
+       <!-- <input type="text" name="" id="numTwo"> -->
+       <input type="text" name="" id="numberShow2">
+
+    </div>
+    <h1 id="result"></h1>
+    <button id="button" onclick="calc()">calculate</button>
+  
+
+  
+
+</body>
+</html>
+
+
+<script>
+    const numberShow=document.getElementById("numberShow")    
+    const operator=document.getElementById("signShow")    
+    // const numberTwo=document.getElementById("numTwo")  
+    const numberShow2=document.getElementById("numberShow2")   
+    const button=document.getElementById("button")    
+    const result = document.getElementById("result")    
+     
+    function calc() {
+        // console.log('calculated')
+
+        if(operator.value  == '*'){
+            result.innerText = (numberShow.value) * numberShow2.value;
+        }
+        else if(operator.value == '+'){
+            result.innerText = Number(numberShow.value) + Number(numberShow2.value);
+
+        }
+        else if(operator.value == '-'){
+            result.innerText = Number(numberShow.value) - Number(numberShow2.value);   
+        } 
+    }
+</script>

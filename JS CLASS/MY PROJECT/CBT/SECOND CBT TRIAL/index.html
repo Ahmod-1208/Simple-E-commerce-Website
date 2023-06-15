@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ/CBT</title>
+</head>
+
+    <style>
+        body{
+            background-color:rgba(98, 217, 13, 0.823);
+        }
+    </style>
+<body>
+<fieldset style="border-style:  dashed;">
+
+    <center>
+     <h1>GOOD LUCK!!!</h1>
+      <h3>   Q1]. WHAT IS 2+3? </h3> 
+        <h4>
+            <input type="radio" name="question1" id="correct1">5 <br>
+            <input type="radio" name="question1" id="">8  <br>
+            <input type="radio" name="question1" id="">2    <br>  
+            <input type="radio" name="question1" id="">14  <br>
+        </h4>
+    
+       <h3> Q2]. WHAT IS 2x3? </h3> 
+        <h4>
+            <input type="radio" name="question2" id="">5  <br>
+            <input type="radio" name="question2" id="correct2">6  <br>
+            <input type="radio" name="question2" id="">2  <br>
+            <input type="radio" name="question2" id="">14  <br>
+        </h4>
+    
+    
+      <h3>  Q3]. WHAT IS 2-3?</h3>  
+        <h4>
+            <input type="radio" name="question3" id="correct3">-1  <br>
+            <input type="radio" name="question3" id="">1  <br>
+            <input type="radio" name="question3" id="">0  <br>
+            <input type="radio" name="question3" id="">none of the above <br>
+        </h4>
+    
+        <button type="submit" name="submit" value="submitQuiz" onclick="result()" style="background-color: blue;">SUBMIT</button>
+    
+        <h3 style="color: red;">Penalty for examination malpractice is very severe</h3>  
+       </center>
+    
+</fieldset>
+
+
+    <script>
+        function result(){
+            let score =  0;
+            if ( document.getElementById('correct1').checked)
+             {
+                score++;
+            }
+            if ( document.getElementById('correct2').checked)
+             {
+                score++;
+            }
+            if ( document.getElementById('correct3').checked)
+             {
+                score++;
+            }
+           
+            document.write("Your score is:"+score);
+           
+
+
+               
+        }
+    </script>
+</body>
+</html>

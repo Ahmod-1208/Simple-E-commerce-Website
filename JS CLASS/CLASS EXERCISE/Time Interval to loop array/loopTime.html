@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <div id="inpHolder" >
+        <input type="text" id="name" placeholder="Enter your registered name">
+        <input type="text" id="email" placeholder="Enter your registered email">
+        <input type="text" id="mobileNumber" placeholder="Enter your registered mobileNumber">
+        <input type="text" id="career" placeholder="Enter your career ">
+        <input type="text" id="gender" placeholder="Enter your gender">
+
+   </div>
+    <button id="generate">GENERATE DATA</button>
+
+    
+    
+    
+
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>mobileNumber</th>
+            <th>career</th>
+            <th>gender</th>
+           
+        </tr>
+        <tbody id="displayBox"></tbody>
+    </thead>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let load = 0
+        let process
+        let processingTime = 0
+        // let userName =  name
+        // let userEmail = email
+        // let usermMobileNumber = mobileNumber
+        // let userCareer = career
+        // let userGender = gender
+      
+        
+
+
+        // let userData = [
+        //     {
+        //         name:"",
+        //         email:"",
+        //         mobileNumber:"",
+        //         career:"",
+        //         gender:"",
+                
+        //     }
+        // ]
+
+
+       generate.addEventListener('click', function(){
+        load =  1000 + Math.random() *3000;
+
+        setTimeout(() => {
+            displayBox.display =`
+                <tr>
+                    <td>${name}</td>
+                    <td>${email}</td>
+                    <td>${mobileNumber}</td>
+                    <td>${career}</td>
+                    <td>${gender}</td>
+                </tr>
+                        `
+            process = setInterval(() => {
+                processingTime ++
+            },10 );
+        }, load);
+       })
+
+       displayBox.addEventListener('click', function(){
+        clearInterval(process)
+        console.log(processingTime)
+       })
+    </script>
+</body>
+</html>
+

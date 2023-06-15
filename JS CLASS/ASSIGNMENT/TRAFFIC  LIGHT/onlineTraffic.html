@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./onlineTraffic.css">
+</head>
+<body>
+    <div class="container">
+        <div class="outsideBox">
+            <div class="lightBox">
+                <div class="light" id="red"></div>
+                <div class="lightTop"></div>
+            </div>
+
+            <div class="lightBox">
+                <div class="light" id="yellow"></div>
+                <div class="lightTop"></div>
+            </div>
+
+            <div class="lightBox">
+                <div class="light" id="green"></div>
+                <div class="lightTop"></div>
+            </div>
+            <div class="boxBorder"></div>
+            <div class="post"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    const red = document.querySelector("#red");
+    const yellow = document.querySelector("#yellow");
+    const green = document.querySelector("#green");
+
+    function changeLights() {
+        setTimeout(() => {
+            redLight()
+        }, 0);
+
+        setTimeout(() => {
+            greenLight()
+        }, 7000);
+
+        setTimeout(() => {
+            yellowLight()
+        }, 4000);
+    }
+
+
+
+
+
+    function redLight(){
+        red.classList.add('active')
+        setTimeout(() => {
+            red.classList.remove('active')
+        }, 1000);
+    }
+
+    function yellowLight(){
+       yellow.classList.add('active')
+        setTimeout(() => {
+           yellow.classList.remove('active')
+        }, 2000);
+    }
+
+    function greenLight(){
+        green.classList.add('active')
+        setTimeout(() => {
+            green.classList.remove('active')
+        }, 3000);
+    }
+
+   setInterval( changeLights, 9000);
+</script>

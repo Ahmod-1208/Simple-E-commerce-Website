@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button>1</button>
+   <button>2</button>
+   <button>3</button>
+  <button>4</button>
+   <button>5</button>
+   <button>6</button> -->
+   <button onclick="add()" style="background-color: blue;color: white;">Push</button>
+   <input type="text" id="showBox"  >
+   <button onclick="del()" style="background-color: red;color: white;">Delete</button>
+   <h1 id="displayer"></h1>
+</body>
+</html>
+
+<script>
+    // create a`rray
+    // const numbers=[45,32,12,13];
+
+    // const fruit=['Apple','bannana','mango'];
+    // const mixed=[22, 'hello', true, undefined, null, {a:1, b:2}, new Date(), function(){return it}];
+
+    
+    // console.log(mixed);
+
+    // const number=[1,2,3,4,5,6,7,8,9,];
+
+
+
+
+
+let numbers=[]
+
+  function add(){
+    let showBox=document.getElementById("showBox").value
+     numbers.push(showBox)
+    document.getElementById("displayer").innerHTML = numbers;
+}
+
+
+function del(){
+    let showBox=document.getElementById("showBox").value
+    numbers.shift(showBox)
+    document.getElementById("displayer").innerHTML = numbers;
+
+  
+
+}
+
+let arr = ['cat', 'dog' ,'cow'];
+console.log(arr.indexOf("cow"))
+
+
+ 
+</script>

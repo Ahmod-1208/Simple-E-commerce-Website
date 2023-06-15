@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    tr,td{
+        padding: 25px;
+        
+    }
+</style>
+<body>
+
+    <input type="text" placeholder="Enter your name..." name="" id="userName">
+    <input type="text" placeholder="Enter your mail..." name="" id="email">
+    <input type="text" placeholder="Enter your career..." name="" id="career">
+    <input type="text" placeholder="Enter your gender..." name="" id="gender">
+    <button onclick="addData()">Add</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>career</th>
+                <th>gender</th>
+                <th>edit</th>
+            </tr>
+        </thead>
+
+        <tbody id="dis"></tbody>
+    </table>
+
+
+    <script>
+
+        
+
+        let userlist = [
+            {
+                name:"",
+                email:"",
+                career:"",
+                gender:"",
+                edit:""
+            }
+        ]
+
+        function display(){
+            dis.innerHTML = ''
+            userlist.forEach((elem) => {
+                console.log(elem)
+                dis.innerHTML += `
+                <tr>
+                    <td>${elem.name}</td>
+                    <td>${elem.email}</td>
+                    <td>${elem.career}</td>
+                    <td>${elem.gender}</td>
+                    <td> <button onclick="edit()" style="color: black;background-color: green;">Edit</button></td>
+                    
+                </tr>
+                
+                `
+            })
+        }
+
+        display()
+
+        function addData(){
+            let data ={
+                name:userName.value,
+                email:email.value,
+                career:career.value,
+                gender:gender.value,
+            }
+            console.log(data)
+            userlist.push(data)
+            display()
+        }
+
+        function edit(i){
+            let newInp = prompt("Re-edit");
+            if (newInp !== ""){
+                userlist[i] =newInp;
+                display();
+            }
+            
+        }
+        
+    </script>
+</body>
+
+</html>

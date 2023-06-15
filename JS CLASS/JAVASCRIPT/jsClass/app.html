@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <input type="text" id="firstBox" >
+        <input type="text" id="secondBox">
+        <input type="text" id="thirdBox"  >
+        <button id="clear"   onclick="erase()">clear</button>
+        <!-- <button class="clear"  value="thirdBox" onclick="thirdBox.value = third.value.toString().slice()" >clear</button> -->
+
+
+    <h5 id="show" style=" color: red;"></h5>
+
+   
+</body>
+</html>
+
+<script>
+  
+ function erase(){
+    // let string= "Clear part of the written words here"
+
+    let firstBox= document.getElementById("firstBox").value
+    let secondBox= document.getElementById("secondBox").value
+    let thirdBox=document.getElementById("thirdBox").value
+    let show=document.getElementById("show").innerHTML;
+
+    let option=thirdBox.slice(firstBox, secondBox)
+     console.log(option)
+     document.getElementById('show').innerHTML=option
+
+
+     if(secondBox > thirdBox.length) {
+        document.getElementById("show").innerHTML="You've exceeded the length of the sentence!!!"
+     }
+ }
+
+
+</script>
+

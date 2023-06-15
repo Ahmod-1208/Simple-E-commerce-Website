@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text-container">
+        <span id="text"></span>
+        <span id="cursor"></span>
+      </div>
+
+</body>
+</html>
+
+
+
+<script>
+
+let text =  ["JavaScript", "coding is my hobby"] ;            
+const textContainer = document.getElementById("text-container");
+let i = 0;
+
+function typeText() {
+  textContainer.textContent = text.slice(0, i);
+  i++;
+
+  if (i > text.length) {
+    clearInterval(typingInterval);
+  }
+}
+
+const typingInterval = setInterval(typeText, 1000); // Adjust the typing speed here
+
+
+
+
+
+
+
+
+let isErasing = false;
+
+function typeAndEraseText() {
+  if (!isErasing) {
+    textContainer.textContent += text[i];
+    i++;
+    
+    if (i === text.length) {
+      isErasing = true;
+      setTimeout(typeAndEraseText, 2000); // Time before starting to erase (in milliseconds)
+    } else {
+      setTimeout(typeAndEraseText, 200); // Adjust the typing speed here
+    }
+  } else {
+    textContainer.textContent = textContainer.textContent.slice(0, -1);
+    
+    if (textContainer.textContent === "") {
+      isErasing = false;
+      i = 0;
+      setTimeout(typeAndEraseText, 700); // Time before restarting the typing (in milliseconds)
+    } else {
+      setTimeout(typeAndEraseText, 50); // Adjust the erasing speed here
+    }
+  }
+}
+
+typeAndEraseText();
+
+
+</script>

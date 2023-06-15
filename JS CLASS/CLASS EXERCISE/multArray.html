@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="userData">
+        <input type="text" name="" id="serialNo">
+        <input type="text" name="" id="userName">
+        <input type="text" name="" id="career">
+        <input type="text" name="" id="level">
+        <input type="text" name="" id="gender">
+        <input type="text" name="" id="age"> <br>
+   </div>
+    <button id="addObject" onclick="addObj()">ADD</button>
+    <div id="showBox"></div>
+    
+
+
+
+    <script>
+        let data =[]
+
+        function addObj(){
+            data.push(userData.value)
+            show()
+
+        }
+
+        function show(){
+            showBox.innerHTML =''
+            data.forEach((elem, i) => {
+                document.getElementById("showBox")
+            })
+        }
+
+        console.log(showBox)
+
+        // let usersData = [
+        //     {
+        //         serialNo:0,
+        //         userName : "OLa",
+        //         career:'web dev',
+        //         level:2,
+        //         gender:'male',
+        //         age:22
+        //     },
+
+
+        //     {
+        //         serialNo:1,
+        //         userName : "Ade",
+        //         career:'mobile dev',
+        //         level:1,
+        //         gender:'male',
+        //         age:20
+        //     },
+
+        //     {
+        //         serialNo:2,
+        //         userName : "Ayo",
+        //         career:'Data Scientist',
+        //         level:2,
+        //         gender:'female',
+        //         age:18
+        //     },
+
+        //     {
+        //         serialNo:3,
+        //         userName : "Ire",
+        //         career:'web dev',
+        //         level:2,
+        //         gender:'female',
+        //         age:18
+        //     },
+
+            
+        // ]
+      
+    </script>
+</body>
+</html>

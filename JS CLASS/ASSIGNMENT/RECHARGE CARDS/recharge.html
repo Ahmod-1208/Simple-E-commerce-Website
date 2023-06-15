@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./recharge.css">
+</head>
+<body id="body">
+    <!-- <marquee behavior="" direction=""><h4>PURCHASE YOUR RECHARGE CARD HERE AT AFFORDABLE PRICE</h4></marquee> -->
+    
+    <div class="" id="cardWrappper">
+        
+      
+           <div id="networkCarrier">
+            
+            <fieldset>
+               
+                <div>
+                    <h4>Choose Network</h4>
+                        <select name="" id="networkSelect">
+                        
+                            <option value="" selected disabled>CHOOSE YOUR LINE</option>
+                            <option value="MTN">  MTN</option>
+                            <option value="AIRTEL">AIRTEL</option>
+                            <option value="GLO">GLO</option>
+                            <option value="9MOBILE">9MOBILE</option>
+                            
+                        </select>
+                   </div>
+        
+                   <div id="price">
+                    <h3>SelectAmount:</h3>
+                        <select name="" id="prices">
+                            <option value="" selected disabled>#Select Amount</option>
+                            <option value="1000">1000</option>
+                            <option value="500">500</option>
+                            <option value="200">200</option>
+                            <option value="100">100</option>
+                            <option value="50">50</option>
+                        </select>
+                   </div> <br> <br>
+        
+        
+                   <div id="pin">
+                    <h3>Generate your pin here</h3>
+                   <p> <input type="text" name="" id="pinInp" placeholder="Generate your pin..."></p>
+                    <button id="generate" onclick="generate()">Generate Pin</button>
+                   
+                   <button id="saveBtn" onclick="save()">Save pin</button>
+                   </div>
+            </fieldset>
+
+        </div>
+
+
+        <div>
+            <h3>Enter Pin Here</h3>
+            <p><input type="text" name="" id="tokenBox" placeholder="Generated Pin"></p>
+            <button id="rechargeBtn" onclick="alert('Recharge Successfully')">RECHARGE YOUR CARD</button>
+        </div>
+    </div>
+
+
+
+
+<div >
+
+   <center> <h3>HISTORY</h3></center>
+
+    <table>
+        <tbody>
+            <tr>
+                <th style="color:darkviolet;">S/N</th>
+                <th style="color: purple">ROUTER</th>
+                <th style="color: green;">DATE PRINTED</th>
+                <th style="color: blue;">AMOUNT</th>
+                <th style="color: purple;">PIN</th>
+                <th style="color: green;">PRINT-REF</th>
+                <th style="color: blue;">STATUS</th>
+                <th style="color: red;">DELETE</th>
+            </tr>
+
+            <tbody id="history"> </tbody>
+        </tbody>
+    </table>
+    
+</div>
+</body>
+</html>
+
+<script src="./recharge.js"></script>
+
+
+

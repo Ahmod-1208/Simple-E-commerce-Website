@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>Document</title>
+    <style>
+      li {
+        padding: 20px 10px;
+        border: 1px solid #ccc;
+        list-style-type: none;
+      }
+    </style>
+</head>
+<body>
+    <h1>ADDING AND REMOVING ELEMENT WITH JAVASCRIPT</h1>
+
+    <div id="container">
+        <p>Lorem ipsum dolor sit.</p>
+
+        <div>
+            <h5>I'm Ahmad </h5>
+        </div>
+        
+    </div>
+
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+       
+        <li>D</li>
+        <li>E</li>
+    </ul>
+    <button>Add In</button>
+
+    <script>
+        const pTag = document.querySelector("p");
+        const cont = document.querySelector("#container");
+        const body = document.querySelector("body");
+        const html = document.querySelector("html")
+
+        // console.log(pTag.nextElementSibling);
+        // console.log(cont.children);
+        
+        // Array.from(cont.children).forEach((elem) =>{
+        //     console.log(elem)
+        // })
+
+        // Array.from(body.children).forEach((tag) =>{
+        //     console.log(tag)
+        // })
+        // Array.from(html.children).forEach((obj) => {
+        //     console.log(obj);
+        // })
+
+        // let list = document.querySelectorAll('li');
+       
+
+        // list.forEach((elem) => {
+           
+        //     elem.addEventListener('click', (e) => {
+        //         e.target.style.backgroundColor = 'blue';
+        //         e.target.remove()
+        //     });
+            
+        // });
+        let ul = document.querySelector("ul");
+
+ul.addEventListener("click", (e) => {
+  if (e.target.nodeName === "LI") {
+    e.target.style.backgroundColor = 'blue'
+    e.target.style.color = 'red'
+    // e.target.remove();
+  }
+  console.log(e);
+});
+
+btn = document.querySelector("button");
+
+// to add element to the existiong ones
+
+btn.addEventListener('click', ()  => {
+    const tag = document.createElement("center");
+    const text = document.createTextNode('I/m at the center');
+ tag.style.backgroundColor = 'blue'
+
+    tag.appendChild(text);
+    ul.appendChild(tag)
+})
+    </script>
+</body>
+</html>

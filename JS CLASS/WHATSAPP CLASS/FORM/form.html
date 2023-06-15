@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM PAGE</title>
+</head>
+<body style="background-color: green;"><br> 
+    <fieldset>
+        <center>
+            <img style="width: 150px;height: 130px;" src="./Screenshot_20220829-120802~2.png" alt="">
+        </center>
+        <center>   <h2 style="font-family: 'Times New Roman', Times, serif;">SEND YOUR DETAILS TO THE SCHOOL MANAGEMENT TO APPROVE YOUR REGISTRATION</h2></center>
+        <form action="/submitform" method="post">
+            <strong>
+                <label for="name">Name:</label>
+                <input placeholder="Full Name" type="text" name="name" id="name" required><br> <br>
+
+
+                <label for="Email">Email:</label>
+                <input placeholder="@gmail.com" type="email" name="email"  id="email" required> <br><br>
+
+                <label for="Department">Department</label>
+                <input placeholder="Enter your depart....." type="text" name="" id="Department" required> <br><br>
+
+                <label for="level">Level:</label>
+                <select name="level" id="levelname" required>
+                    <option value="">ND1</option>
+                    <option value="">ND2</option>
+                    <option value="">HND1</option>
+                    <option value="">HND2</option>
+
+                </select> <br><br>
+
+                <label for="Matric NUm">Matric num:</label>
+                <input placeholder="Enter your matric num..." type="text" id="Matric num" required> <br><br>
+
+                <label for="password">Password:</label>
+                <input placeholder="**********" type="password" name="password" id="password" required> <br><br>
+
+               
+
+            </strong>
+        </form>
+
+    </fieldset>
+    
+</body>
+</html>

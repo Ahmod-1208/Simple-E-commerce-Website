@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .error{
+        border: 2px solid red;
+    }
+    .success{
+        border: 2px solid green;
+    }
+</style>
+<body>
+    <input type="text" name="" id="inp">
+ 
+
+    <script>
+         let userNamePattern =/^[a-z]{6,12}$/;
+         let userName ="Ahmad";
+        
+
+         if(userNamePattern.test(userName)){
+            console.log('passed');
+         }else{
+            console.log('failed')
+         }
+
+         inp.addEventListener("keyup", (e)=>{
+            if(userNamePattern.test(e.target.value)){
+                e.target.classList.add("success")
+            }else{
+                e.target.classList.add("error")
+            }
+            
+         })
+
+        
+
+    </script>
+       
+    
+    
+</body>
+</html>

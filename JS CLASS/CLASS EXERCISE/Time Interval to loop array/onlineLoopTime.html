@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="display"></div>
+
+
+
+
+    <script>
+
+        // STEP1
+         let array =["Ahmod","Salaudeen","Adio","Ayomide","The innovator"];
+    
+        let callSetTimeout = () =>{
+            
+            for(let i = 0; i <= array.length;  i++){
+                // console.log("value", array[i]);
+               ( (j) => {
+                setTimeout( () => {
+                   console.log(array[i])
+                }, j *1000)
+               })(i) 
+               
+               
+            }
+            //    display.innerHTML =display
+          
+        }
+        
+    
+        // document.getElementById("display") += innerTEXT.value
+
+
+               // step:2
+
+        //     array.map(
+        //         (value, index) => {
+        //            setTimeout(
+        //           () => {console.log(value, "" ,index)},
+        //             index * 1000
+        //            );
+        //         }
+        //     );
+        //     }
+        //     array.map(
+        //         (value, index) => {
+        //            setTimeout(
+        //           () => {console.log(value, index)},
+        //             index * 1000
+        //            );
+        //         }
+        //     );
+        //    display.innerHTML += `<h1>${value} ${index}</h1>`
+
+
+
+         
+        
+        callSetTimeout();
+
+
+
+        // STEP2
+        // let array =["Ahmod","Salaudeen","Adio","Ayomide","The innovator"];
+
+        // let callSetTimeout = () =>{
+
+
+        //     array.map(
+        //         (value, index) => {
+        //            setTimeout(
+        //           () => {console.log(value, "" ,index)},
+        //             index * 1000
+        //            );
+        //         }
+        //     );
+          // }
+
+
+
+
+
+    </script>
+</body>
+</html>
