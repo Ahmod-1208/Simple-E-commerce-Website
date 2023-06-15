@@ -8,11 +8,11 @@
 body{
     margin:4vh ;
 }
-/* .container{
+.container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-} */
+}
 /* .sideBar{
     width: 25%;
     border: apx solid #eee;
