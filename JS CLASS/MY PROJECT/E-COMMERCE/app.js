@@ -56,7 +56,7 @@ const displayItem = (items) =>{
                  <h2>$ ${price}.00</h2>
                  <button>Add to cart </button>
             </div>
-            
+           </div> 
             `
         )
     }).join('')
