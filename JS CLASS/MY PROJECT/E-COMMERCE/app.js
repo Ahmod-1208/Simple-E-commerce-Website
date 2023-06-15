@@ -13,7 +13,7 @@ const product = [
     },
     {
         id: 2,
-        image: 'IMG/fan.jpg',
+        image: 'IMG/fan.png',
         title: '500watt FAN',
         price: 200
     },
@@ -25,13 +25,13 @@ const product = [
     },
     {
         id:4 ,
-        image: 'IMG/phone.jpg',
+        image: 'IMG/phone.png',
         title: 'SAMSUNG',
         price: 210
     },
 ]
 
-const categories = [... new set(product.map((item)=>{return item}))]
+const categories = [... new Set(product.map((item)=>{return item}))]
 
 document.getElementById('searchBar').addEventListener('keyup', (e)=>{
     const searchData = e.target.vaalue.toLowerCase();
