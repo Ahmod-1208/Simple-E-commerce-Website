@@ -57,11 +57,11 @@ input{
 .fa-brands:hover{
     color:orangered ;
 }
-/* .top{
+.top{
     height: 60px;
     border-radius: 3px;
     background-color: #eee;
     display: flex;
     align-items: center;
     justify-content: space-between;
-} */
+}
